@@ -1,8 +1,137 @@
-$color-black: #0B0D17;
-$color-blue: #D0D6F9;
-$color-white: #FFFFFF;
+$color-black: #0b0d17;
+$color-blue: #d0d6f9;
+$color-white: #ffffff;
+
+html {
+  max-height: 900px;
+}
 
 body {
-    background-color: $color-black;
+  background-color: $color-black;
+  color: $color-white;
+  background-image: url('./../assets/home/background-home-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  font-family: 'Barlow Condensed', sans-serif;
+  // font-family: 'Bellefair', serif;
+  font-size: 16px;
+}
+
+/* reset css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 50px 40px;
+
+  p {
+    font-size: 18px;
+    color: $color-blue;
+    line-height: 32px;
+  }
+
+  &.main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 200px 80px;
+  }
+}
+
+h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4.725px;
+  font-weight: 400;
+  color: $color-blue;
+
+  strong {
+    margin: 24px 0;
+    font-size: 150px;
+    font-family: 'Bellefair', serif;
+    display: block;
+    letter-spacing: 1px;
     color: $color-white;
+  }
+}
+
+a.nav_explore {
+  height: 274px;
+  width: 274px;
+  background-color: $color-white;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 274px;
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  justify-self: end;
+  align-self: end;
+}
+
+nav {
+  margin-top: 40px;
+
+  .nav__background {
+    background: linear-gradient(
+      to right,
+      transparent 50%,
+      rgba(255, 255, 255, 0.04) 50%
+    );
+    backdrop-filter: blur(81.5485px);
+  }
+
+  .nav__container {
+    max-width: 1440px;
+    position: relative;
+    height: 96px;
+    margin: auto;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    height: 48px;
+    margin-top: -24px;
+  }
+
+  ul {
+    list-style: none;
+    line-height: 96px;
+    float: right;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+    margin-left: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  a.current {
+    text-decoration: underline;
+    text-underline-offset: 40px;
+  }
 }
