@@ -4,11 +4,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="./../../assets/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./../../css/style.css">
-        <title>{{title}}</title>
+        <title>{{ title }}</title>
     </head>
-    <body>
-        {% include 'components/destination_nav.njk' %}
-      
+    <body class="destination">
+        <nav>
+            <div class="nav__background">
+                <div class="nav__container">
+                    <img src="./../../assets/shared/logo.svg" alt="logo">
+                    <ul>
+                        <li><a href="./../../"><strong>00</strong>Home</a></li>
+                        <li><a href="./" class="current"><strong>01</strong>Destination</a></li>
+                        <li><a href="./"><strong>02</strong>Crew</a></li>
+                        <li><a href="./"><strong>03</strong>Technology</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container destination">
+                <h1>
+                    <strong>01</strong>
+                    Pick your destination
+                </h1>
+                <div class="destination__grid">
+                    <img src="{{ image }}"/>
+                    <div>
+                        {% include 'components/destination_nav.njk' %}
+                        <h2>{{ name }}</h2>
+                        <p>{{ description }}</p>
+                        <div class="destination__stats">
+                            <div>
+                                <div class="stats__label">Avg. Distance</div>
+                                {{ distance }}
+                            </div>
+                            <div>
+                                <div class="stats__label">Est. travel time</div>
+                                {{ travel }}</div>
+                        </div>
+                    </div>
+                </main>
+            </body>
+        </html>
     </body>
 </html>

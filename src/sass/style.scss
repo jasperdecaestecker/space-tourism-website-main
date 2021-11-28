@@ -9,12 +9,19 @@ html {
 body {
   background-color: $color-black;
   color: $color-white;
-  background-image: url('./../assets/home/background-home-desktop.jpg');
   background-repeat: no-repeat;
   background-position: top right;
   font-family: 'Barlow Condensed', sans-serif;
   // font-family: 'Bellefair', serif;
   font-size: 16px;
+
+  &.main {
+    background-image: url('./../assets/home/background-home-desktop.jpg');
+  }
+
+  &.destination {
+    background-image: url('./../assets/destination/background-destination-desktop.jpg');
+  }
 }
 
 /* reset css */
@@ -63,6 +70,49 @@ h1 {
     letter-spacing: 1px;
     color: $color-white;
   }
+}
+
+.destination h1 {
+  color: $color-white;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-bottom: 95px;
+
+  strong {
+    opacity: 25%;
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline;
+  }
+}
+
+.destination h2 {
+  font-size: 100px;
+  font-family: 'Bellefair', serif;
+  display: block;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.destination__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  p {
+    font-size: 16px;
+    line-height: 32px;
+    color: $color-blue;
+  }
+
+  img {
+    margin-left: 40px;
+  }
+}
+
+.destination__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 a.nav_explore {
